@@ -84,3 +84,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+influxdb:
+  image:
+    tag: "1.8.6"
