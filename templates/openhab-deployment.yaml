@@ -22,7 +22,7 @@ spec:
       {{ end }}
 #      hostNetwork: true
       containers:
-      - image: openhab/openhab:3.1.0
+      - image: openhab/openhab:{{ .Chart.AppVersion }}
         name: openhab
         env:
         - name: USER_ID

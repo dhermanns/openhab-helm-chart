@@ -41,7 +41,7 @@ service:
   port: 80
 
 defaultIngress:
-  enabled: true
+  enabled: false
 
 ingress:
   enabled: true
@@ -54,11 +54,21 @@ ingress:
     ingress.kubernetes.io/auth-remove-header: "true"
   hosts:
     - host: dheoh.duckdns.org
-    - host: oh.fritz.box
+    - host: oh.lan
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
+
+grafanaIngress:
+  enabled: true
+  hosts:
+    - host: grafana.lan
+
+influxIngress:
+  enabled: true
+  hosts:
+    - host: influx.lan
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
