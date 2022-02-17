@@ -1,0 +1,57 @@
+apiVersion: v1
+entries:
+  grafana:
+  - apiVersion: v2
+    appVersion: 8.2.3
+    created: "2022-02-17T19:26:46.209779+01:00"
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 8a7ec85aba90ba9d3ae90d8004c7da23f3c509534b0f3c065096e1935f0df6b6
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rluckie@cisco.com
+      name: rtluckie
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    type: application
+    urls:
+    - https://dhermanns.github.io/openhab-helm-chart/charts/grafana-6.17.6.tgz
+    version: 6.17.6
+  influxdb:
+  - apiVersion: v1
+    appVersion: 1.8.6
+    created: "2022-02-17T19:26:46.211103+01:00"
+    description: Scalable datastore for metrics, events, and real-time analytics.
+    digest: 5db606e0656b0c477ca0163bdbd7557270e304dd1813af93a015c55ae2c695d5
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    - influxdata
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    - email: urakiny@gmail.com
+      name: aisuko
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: influxdb
+    sources:
+    - https://github.com/influxdata/influxdb
+    urls:
+    - https://dhermanns.github.io/openhab-helm-chart/charts/influxdb-4.10.0.tgz
+    version: 4.10.0
+generated: "2022-02-17T19:26:46.206928+01:00"
