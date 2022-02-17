@@ -53,7 +53,7 @@ ingress:
     ingress.kubernetes.io/custom-response-headers: "Set-Cookie: X-OPENHAB-AUTH-HEADER=1"
     ingress.kubernetes.io/auth-remove-header: "true"
   hosts:
-    - host: dheoh.duckdns.org
+    - host: myoh.duckdns.org
     - host: oh.lan
   tls: []
   #  - secretName: chart-example-tls
