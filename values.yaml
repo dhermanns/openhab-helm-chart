@@ -25,9 +25,6 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
-  # fsGroup: 2000
-
 securityContext: {}
   # capabilities:
   #   drop:
@@ -52,13 +49,12 @@ ingress:
 #    ingress.kubernetes.io/custom-request-headers: "Set-Cookie: X-OPENHAB-AUTH-HEADER=1"
     ingress.kubernetes.io/custom-response-headers: "Set-Cookie: X-OPENHAB-AUTH-HEADER=1"
     ingress.kubernetes.io/auth-remove-header: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
     - host: myoh.duckdns.org
     - host: oh.lan
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+  tlshosts:
+    - host: myoh.duckdns.org
 
 grafanaIngress:
   enabled: true
