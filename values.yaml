@@ -25,14 +25,6 @@ serviceAccount:
 
 podAnnotations: {}
 
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
-
 service:
   type: LoadBalancer
   port: 80
@@ -41,14 +33,14 @@ defaultIngress:
   enabled: false
 
 ingress:
-  enabled: true
+  enabled: false
   annotations:
     kubernetes.io/ingress.class: traefik
-    traefik.ingress.kubernetes.io/auth-type: basic
-    traefik.ingress.kubernetes.io/auth-secret: authsecret
+    ingress.kubernetes.io/auth-type: basic
+    ingress.kubernetes.io/auth-secret: authsecret
 #    ingress.kubernetes.io/custom-request-headers: "Set-Cookie: X-OPENHAB-AUTH-HEADER=1"
-    ingress.kubernetes.io/custom-response-headers: "Set-Cookie: X-OPENHAB-AUTH-HEADER=1"
-    ingress.kubernetes.io/auth-remove-header: "true"
+#    ingress.kubernetes.io/custom-response-headers: "Set-Cookie: X-OPENHAB-AUTH-HEADER=1"
+#    ingress.kubernetes.io/auth-remove-header: "true"
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
     - host: myoh.duckdns.org
