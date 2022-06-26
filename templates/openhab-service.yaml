@@ -22,6 +22,12 @@ spec:
     - name: "9123"
       port: 9123
       targetPort: 9123
+    - name: "9125"
+      port: 9125
+      targetPort: 9125
+    - name: "9126"
+      port: 9126
+      targetPort: 9126
   selector:
     {{- include "openhab-helm-chart.selectorLabels" . | nindent 4 }}
 

@@ -36,6 +36,8 @@ spec:
         - containerPort: 8101
         - containerPort: 1900
         - containerPort: 9123
+        - containerPort: 9125
+        - containerPort: 9126
         resources: {}
         tty: true
         volumeMounts:

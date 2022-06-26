@@ -51,12 +51,12 @@ ingress:
 grafanaIngress:
   enabled: true
   hosts:
-    - host: grafana.lan
+    - host: oh-grafana
 
 influxIngress:
   enabled: true
   hosts:
-    - host: influx.lan
+    - host: oh-influxdb
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
