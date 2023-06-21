@@ -18,9 +18,9 @@ spec:
     spec:
       {{ if .Values.nodeSelector.active }}
       nodeSelector:
-        kubernetes.io/hostname: {{ .Values.nodeSelector.hostname }}
+        kubernetes.io/hostname: k3
       {{ end }}
-#      hostNetwork: true
+      hostNetwork: true
       containers:
       - image: openhab/openhab:{{ .Chart.AppVersion }}
         name: openhab
@@ -29,15 +29,19 @@ spec:
           value: "9999"
         - name: GROUP_ID
           value: "9999"
+        - name: OPENHAB_HTTP_PORT
+          value: "8080"
         ports:
         - containerPort: 8080
-        - containerPort: 8443
-        - containerPort: 8001
-        - containerPort: 8101
-        - containerPort: 1900
+#        - containerPort: 8443
+#        - containerPort: 8101
+        - containerPort: 5007
         - containerPort: 9123
+        - containerPort: 9124
+        # CCU Ports
         - containerPort: 9125
         - containerPort: 9126
+          protocol: TCP
         resources: {}
         tty: true
         volumeMounts:

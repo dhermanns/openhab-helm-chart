@@ -86,3 +86,11 @@ affinity: {}
 influxdb:
   image:
     tag: "1.8.6"
+
+grafana:
+  pspEnabled: false
+  rbac:
+    pspEnabled: false
+
+  testFramework:
+    enabled: false
